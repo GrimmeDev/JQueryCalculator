@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>jQuery Calculator</title>
+  <meta charset="UTF-8">
+  <title>jQuery Calculator</title>
 
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <!-- Added a link to our external stylesheet-->
-    <link rel="stylesheet" href="style.css">
+  <!-- Added a link to our external stylesheet-->
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<!-- Jumbotron for Title -->
-<div class="jumbotron">
+  <!-- Jumbotron for Title -->
+  <div class="jumbotron">
     <h1 class="text-center">jQuery Calculator</h1>
     <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3>
-</div>
+  </div>
 
-<div class="container">
+  <div class="container">
 
     <div class="row">
 
@@ -73,34 +75,41 @@
     </div>
   </div>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-$(document).ready(function() {
+    $(document).ready(function () {
 
-// Your code here...
-// variables storing labels
-var firstNum = $("#first-number");
-var secondNum = $("#second-number");
-var operand = $("#operator");
-var answer = $("#result");
-// event listeners for all "number" classes
+      // Your code here...
+      // variables storing labels
+      var firstNum = $("#first-number");
+      var secondNum = $("#second-number");
+      var operand = $("#operator");
+      var answer = $("#result");
+      // event listeners for all "number" classes
 
-// event listeners for all "operator" classes
+      // event listeners for all "operator" classes
 
-// event listener for "equals" class
+      // event listener for "equals" class
+      $(".equal").click(function () {
+        // if/else chain determining correct operand
+        if($("operator[value='plus'")){
+          console.log("Plus selected");
+          // answer.text(firstNum+secondNum);
+        }
+      })
+      // event listener for "clear" class
+      $(".clear").click(function () {
+        firstNum.text("");
+        secondNum.text("");
+        operand.text("");
+        answer.text("");
+      });
 
-// event listener for "clear" class
-$(".clear").click(function(){
-firstNum.text("");
-secondNum.text("");
-operand.text("");
-answer.text("");
-});
 
+    });
 
-});
-
-</script>
+  </script>
 
 </body>
+
 </html>
