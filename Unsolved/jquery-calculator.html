@@ -88,8 +88,7 @@
       // event listeners for all "number" classes
       $(".number").click(function(){
         console.log("Number Checked");
-        firstNum.text($(this).attr("value"));
-        $("firstNum").append(value);
+        firstNum.append($(this).attr("value"));
       })
 
       // event listeners for all "operator" classes
