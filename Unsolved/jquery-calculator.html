@@ -77,37 +77,64 @@
 
   <script type="text/javascript">
 
+
     $(document).ready(function () {
 
-      // Operator event listeners
+      // Your code here...
+      // variables storing labels
+      var firstNum = $("#first-number");
+      var second0Num = $("#second-number");
+      var operand = $("#operator");
+      var answer = $("#result");
+      // event listeners for all "number" classes
 
-      $("#plus").click(function () {
-
+      // event listeners for all "operator" classes
+      $("#button-plus").click(function () {
+        console.log("plus")
         // if/else statements
-      }
+      })
 
-    $("#minus").click(function () {
-
+      $("#button-minus").click(function () {
+        console.log("minus")
         // if/else statements
-      }
+      })
 
-    $("#multiply").click(function () {
-
+      $("#button-multiply").click(function () {
+        console.log("multiply")
         // if/else statements
-      }
+      })
 
-    $("#divide").click(function () {
+      $("#button-divide").click(function () {
+        console.log("divide")
+        // if/else statements 
+      })
 
+      $("#button-power").click(function () {
+        console.log("power")
         // if/else statements
-      }
-
-    $("#power").click(function () {
-
-        // if/else statements
-      }
+      })
 
 
-});
+      // event listener for "equals" class
+      $(".equal").click(function () {
+        // if/else chain determining correct operand
+        if ($("operator[value='plus'")) {
+          console.log("Plus selected");
+          // answer.text(firstNum+secondNum);
+        }
+      })
+      // event listener for "clear" class
+      $(".clear").click(function () {
+        firstNum.text("");
+        secondNum.text("");
+        operand.text("");
+        answer.text("");
+      });
+
+
+
+    });
+
 
   </script>
 
