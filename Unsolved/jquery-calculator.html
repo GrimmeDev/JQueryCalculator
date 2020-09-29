@@ -77,7 +77,6 @@
 
   <script type="text/javascript">
 
-
     $(document).ready(function () {
       // Your code here...
       // variables storing labels
@@ -86,52 +85,62 @@
       var operand = $("#operator");
       var answer = $("#result");
       // event listeners for all "number" classes
-      $(".number").click(function(){
+      $(".number").click(function () {
         console.log("Number Checked");
-        firstNum.append($(this).attr("value"));
+        // code below determins which number to write text in
+        // based on value of operand h1 tag
+        if (operand.is(':empty')) {
+          console.log("Empty");
+          firstNum.append($(this).attr("value"));
+        }
+        else
+          secondNum.append($(this).attr("value"));
+
       })
 
       // event listeners for all "operator" classes
       $("#button-plus").click(function () {
         console.log("plus")
+        // find method to display ICON of operand
+        // operand.text($(this).attr("value"));
         // if/else statements
       })
 
-    $("#button-minus").click(function () {
-      console.log("minus")
-      // if/else statements
-    })
+      $("#button-minus").click(function () {
+        console.log("minus")
+        // if/else statements
+      })
 
-    $("#button-multiply").click(function () {
-      console.log("multiply")
-      // if/else statements
-    })
+      $("#button-multiply").click(function () {
+        console.log("multiply")
+        // if/else statements
+      })
 
-    $("#button-divide").click(function () {
-      console.log("divide")
-      // if/else statements 
-    })
+      $("#button-divide").click(function () {
+        console.log("divide")
+        // if/else statements 
+      })
 
-    $("#button-power").click(function () {
-      console.log("power")
-      // if/else statements
-    })
+      $("#button-power").click(function () {
+        console.log("power")
+        // if/else statements
+      })
 
 
-    // event listener for "equals" class
-    $(".equal").click(function () {
-      console.log("Equals clicked");
-       // will read firstNum + operand + secondNum
+      // event listener for "equals" class
+      $(".equal").click(function () {
+        console.log("Equals clicked");
+        // will read firstNum + operand + secondNum
         // output to answer
-      
-    })
-    // event listener for "clear" class
-    $(".clear").click(function () {
-      firstNum.text("");
-      secondNum.text("");
-      operand.text("");
-      answer.text("");
-    });
+
+      })
+      // event listener for "clear" class
+      $(".clear").click(function () {
+        firstNum.text("");
+        secondNum.text("");
+        operand.text("");
+        answer.text("");
+      });
 
 
 
