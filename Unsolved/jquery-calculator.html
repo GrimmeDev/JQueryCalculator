@@ -86,6 +86,11 @@
       var operand = $("#operator");
       var answer = $("#result");
       // event listeners for all "number" classes
+      $(".number").click(function(){
+        console.log("Number Checked");
+        firstNum.text($(this).attr("value"));
+        $("firstNum").append(value);
+      })
 
       // event listeners for all "operator" classes
 
