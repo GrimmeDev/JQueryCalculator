@@ -77,8 +77,8 @@
 
   <script type="text/javascript">
 
-    $(document).ready(function () {
 
+    $(document).ready(function () {
       // Your code here...
       // variables storing labels
       var firstNum = $("#first-number");
@@ -93,14 +93,38 @@
       })
 
       // event listeners for all "operator" classes
+      $("#button-plus").click(function () {
+        console.log("plus")
+        // if/else statements
+      })
+
+      $("#button-minus").click(function () {
+        console.log("minus")
+        // if/else statements
+      })
+
+      $("#button-multiply").click(function () {
+        console.log("multiply")
+        // if/else statements
+      })
+
+      $("#button-divide").click(function () {
+        console.log("divide")
+        // if/else statements 
+      })
+
+      $("#button-power").click(function () {
+        console.log("power")
+        // if/else statements
+      })
+
 
       // event listener for "equals" class
       $(".equal").click(function () {
+        console.log("Equals clicked");
         // if/else chain determining correct operand
-        if($("operator[value='plus'")){
-          console.log("Plus selected");
-          // answer.text(firstNum+secondNum);
-        }
+        // if plus selected
+
       })
       // event listener for "clear" class
       $(".clear").click(function () {
@@ -111,7 +135,9 @@
       });
 
 
+
     });
+
 
   </script>
 
