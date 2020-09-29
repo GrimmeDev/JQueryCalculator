@@ -78,7 +78,6 @@
   <script type="text/javascript">
 
     $(document).ready(function () {
-
       // Your code here...
       // variables storing labels
       var firstNum = $("#first-number");
@@ -91,11 +90,10 @@
 
       // event listener for "equals" class
       $(".equal").click(function () {
+        console.log("Equals clicked");
         // if/else chain determining correct operand
-        if($("operator[value='plus'")){
-          console.log("Plus selected");
-          // answer.text(firstNum+secondNum);
-        }
+        // if plus selected
+
       })
       // event listener for "clear" class
       $(".clear").click(function () {
