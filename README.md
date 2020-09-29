@@ -7,4 +7,4 @@ Language:
     The language that was used for this project was jQuery.
 
 Example img;
-    ![imagetext](/desktop/jquerycalc.png)
+    ![imagetext](./Desktop/jquerycalc.png)
